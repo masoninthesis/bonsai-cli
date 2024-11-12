@@ -1,3 +1,18 @@
 path: web/wp
 server:
   docroot: web
+
+@development:
+  ssh: vagrant@bonsai.test
+  path: /srv/www/bonsai.so/current/web/wp
+  url: http://bonsai.test
+
+@staging:
+  ssh: web@staging.bonsai.so
+  path: /srv/www/bonsai.so/current/web/wp
+  url: https://staging.bonsai.so
+
+@production:
+  ssh: web@bonsai.so
+  path: /srv/www/bonsai.so/current/web/wp
+  url: https://bonsai.so
